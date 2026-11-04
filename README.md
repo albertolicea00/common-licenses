@@ -192,13 +192,17 @@ All 26 files reside directly inside [`common/`](./common/) in plain text (`.txt`
 
 The directory [`spdx-license-list-data/`](./spdx-license-list-data/) is a Git submodule pointing to the official [SPDX license data repository](https://github.com/spdx/license-list-data). The parent repository records a specific upstream commit; `.gitmodules` records its path and URL. The selected templates in `common/` are maintained separately and are not automatically refreshed when the submodule changes.
 
-### Clone this repository with its submodule
+### Clone this repository without downloading SPDX
 
 ```sh
-git clone --recurse-submodules <repository-url>
+git clone <repository-url>
 ```
 
-If you already cloned this repository, initialize the submodule at the recorded commit:
+GitHub displays the submodule as a link to the recorded upstream commit. Its contents do not need to be downloaded locally or uploaded with this repository.
+
+### Download SPDX locally (optional)
+
+To initialize the submodule at the recorded commit:
 
 ```sh
 git submodule update --init --recursive
@@ -214,8 +218,6 @@ git diff --submodule
 git add spdx-license-list-data
 git commit -m "chore: update SPDX license data"
 ```
-
-The initial submodule checkout uses a shallow clone. To download its full history when needed, run `git -C spdx-license-list-data fetch --unshallow`.
 
 Review the upstream changes before committing the new submodule reference. To restore the version recorded by the parent repository, run `git submodule update --init --recursive`.
 
