@@ -2,6 +2,8 @@
 
 This repository contains curated license templates for everyday development, alongside the official upstream license catalog from the **SPDX (Software Package Data Exchange)** standard.
 
+> **License or licence?** Both mean the same thing as nouns: **license** is the US spelling, while **licence** is the UK spelling. As a verb, both use **license**. This repository uses the US spelling.
+
 ---
 
 ## 🗂️ Directory Structure
