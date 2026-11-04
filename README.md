@@ -195,7 +195,8 @@ The directory [`spdx-license-list-data/`](./spdx-license-list-data/) is a Git su
 ### Clone this repository without downloading SPDX
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/albertolicea00/common-licenses.git
+cd common-licenses
 ```
 
 GitHub displays the submodule as a link to the recorded upstream commit. Its contents do not need to be downloaded locally or uploaded with this repository.
